@@ -1,6 +1,19 @@
 {
   "name": "ngx-images-gallery",
-  "version": "0.0.0",
+  "version": "1.0.1",
+  "description": "A simple images gallery for Angular",
+  "author": "David Cooper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcooperdev/ngx-images-gallery"
+  },
+  "keyboards": [
+    "angular",
+    "javascript",
+    "typescript",
+    "gallery",
+    "images"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
