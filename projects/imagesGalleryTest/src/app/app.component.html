@@ -1,0 +1,13 @@
+<section>
+    <ngx-images-gallery
+        #imagesGallery
+        [navbarOrientation]="horizontal"
+        [selectedImage]="selectedImage">
+        <ngx-navbar
+            [imageWidth]="'64px'"
+            [imageHeight]="'64px'"
+            [images]="elements"
+            [maxImages]="6"
+        ></ngx-navbar>
+    </ngx-images-gallery>
+</section>
