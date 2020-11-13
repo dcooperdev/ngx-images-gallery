@@ -1,0 +1,28 @@
+<section #navbar id="navbar" [class.horizontal]='horizontal' *ngIf="images.length > 0">
+    <section *ngFor="let image of images | getMaxThumbnailNavbar:maxImages">
+        <section
+            class="thumbnail"
+            [style.width]="imageWidth"
+            [style.height]="imageHeight"
+            [ngClass]="{
+                'vertical-space': horizontal === true,
+                'horizontal-space': horizontal === false,
+                'active': selected === image
+            }"
+            (mouseenter)="selecImage(image)"
+        >
+            <img
+                libImageAspect
+                classToApply="portrait"
+                [src]="image.url"
+                [alt]="image.name"
+            >
+        </section>
+    </section>
+    <div
+        id="see-more"
+        class="thumbnail"
+        [style.width]="imageWidth"
+        [style.height]="imageHeight"
+        *ngIf="images.length > maxImages">+{{ images.length - maxImages }}</div>
+</section>

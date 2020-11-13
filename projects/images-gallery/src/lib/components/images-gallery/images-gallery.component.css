@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+  background-size: contain!important;
+}
+
+#images-gallery {
+  display: flex;
+  width: 100%;
+  height:100%;
+}
+
+#image {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.navbar-horizontal {
+  margin-right: 5px;
+}
+
+.navbar-vertical {
+  margin-top: 5px;
+}

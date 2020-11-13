@@ -1,0 +1,21 @@
+:host {
+    display: contents;
+}
+span {
+    position: absolute;
+    padding: 16px;
+    height: 32px;
+    width: 32px;
+    background-color: #9e9e9ea3;
+    border-radius: 50px;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#left-arrow {
+    left: 0;
+}
+#right-arrow {
+    right: 0;
+}

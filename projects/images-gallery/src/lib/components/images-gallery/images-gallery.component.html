@@ -1,0 +1,13 @@
+<section #imagesGallery id="images-gallery" [class.flex-column]="navbarOrientation">
+    <section
+        [ngClass]="{
+            'navbar-horizontal': !navbarOrientation,
+            'navbar-vertical': navbarOrientation
+        }"
+    >
+        <ng-content></ng-content>
+    </section>
+    <section id="image" [style.background]="'url(' + selectedImage.url + ')'">
+        <ngx-navigation></ngx-navigation>
+    </section>
+</section>
