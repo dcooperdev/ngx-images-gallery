@@ -1,24 +1,47 @@
-# ImagesGallery
+# ngx-images-galley
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.14.
+ngx-images-galley is my first Angular library for images galleries.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project imagesGallery` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project imagesGallery`.
-> Note: Don't forget to add `--project imagesGallery` or else it will be added to the default project in your `angular.json` file. 
+Use the package manager [npm](https://www.npmjs.com/) to install ngx-images-galley.
 
-## Build
+```bash
+npm install ngx-images-galley --save
+```
 
-Run `ng build imagesGallery` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Import
 
-## Publishing
+```javascript
+import { ImagesGalleryModule} from 'images-gallery';
 
-After building your library with `ng build imagesGallery`, go to the dist folder `cd dist/images-gallery` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test imagesGallery` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@NgModule({
+  ...,
+  imports: [
+    ImagesGalleryModule,
+    ...
+  ]
+})
+export class AppModule { }
+```
+## Usage
+```html5
+<ngx-images-gallery
+  [navbarOrientation]="true" // true: horizontal | false: vertical
+  [selectedImage]="selectedImage" //deprecated
+>
+    <ngx-navbar
+      [imageWidth]="'64px'"
+      [imageHeight]="'64px'"
+      [images]="elements" //array of images
+      [maxImages]="6"
+    ></ngx-navbar>
+</ngx-images-gallery>
+```
+## Interfaces
+```javascript
+export interface Image {
+    url: string;
+    name: string;
+}
+```
