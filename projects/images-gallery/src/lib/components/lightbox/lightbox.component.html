@@ -1,0 +1,11 @@
+<section class="shadow" [style.display]="(status) ? 'flex' : 'none'">
+    <section class="container">
+        <section
+            id="image"
+            [style.background]="'url(' + selectedImage.url + ')'"
+            (swipeleft)="onSwipeLeft($event)"
+            (swiperight)="onSwipeRight($event)"
+        ></section>
+        <ngx-navigation class="hide-on-mobile" [lightbox]="true"></ngx-navigation>
+    </section>
+</section>

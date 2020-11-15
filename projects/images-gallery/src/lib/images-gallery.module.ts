@@ -8,6 +8,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 
 import * as Hammer from 'hammerjs';
 import { ImgIsLoadingDirective } from './directives/img-is-loading.directive';
+import { LightboxComponent } from './components/lightbox/lightbox.component';
 
 @Injectable() 
 export class MyHammerConfig extends HammerGestureConfig {
@@ -24,12 +25,13 @@ export class MyHammerConfig extends HammerGestureConfig {
     ImageAspectDirective,
     NavigationComponent,
     ImgIsLoadingDirective,
+    LightboxComponent,
   ],
   imports: [
     BrowserModule,
     HammerModule 
   ],
-  exports: [ImagesGalleryComponent, NavbarComponent],
+  exports: [ImagesGalleryComponent, NavbarComponent, LightboxComponent],
   providers: [ 
     { 
       provide: HAMMER_GESTURE_CONFIG, 

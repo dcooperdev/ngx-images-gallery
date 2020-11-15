@@ -1,9 +1,5 @@
 <section>
-    <ngx-images-gallery
-        #imagesGallery
-        [navbarOrientation]="horizontal"
-        [selectedImage]="selectedImage"
-        [spinner]="'/assets/Spin-1s-200px.svg'">
+    <ngx-images-gallery [navbarOrientation]="horizontal">
         <ngx-navbar
             [imageWidth]="'64px'"
             [imageHeight]="'64px'"
@@ -12,4 +8,5 @@
             [hideOnMobile]="true"
         ></ngx-navbar>
     </ngx-images-gallery>
+    <ngx-lightbox></ngx-lightbox>
 </section>

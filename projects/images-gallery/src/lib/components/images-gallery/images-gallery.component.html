@@ -1,4 +1,4 @@
-<section #imagesGallery id="images-gallery" [class.flex-column]="navbarOrientation">
+<section #imagesGallery id="images-gallery">
     <section
         [ngClass]="{
             'navbar-horizontal': !navbarOrientation,
@@ -7,11 +7,14 @@
     >
         <ng-content></ng-content>
     </section>
-    <section
-        id="image"
-        [style.background]="'url(' + selectedImage.url + ')'"
-        (swipeleft)="onSwipeLeft($event)"
-        (swiperight)="onSwipeRight($event)">
+    <section id="image">
+        <img
+            [src]="selectedImage.url"
+            [alt]="selectedImage.name"
+            (swipeleft)="onSwipeLeft($event)"
+            (swiperight)="onSwipeRight($event)"
+            (tap)="openLightbox()"
+        >
         <ngx-navigation class="hide-on-mobile"></ngx-navigation>
     </section>
 </section>

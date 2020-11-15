@@ -1,6 +1,9 @@
-<span id="left-arrow" (click)="previous()">
+<span id="close-arrow" *ngIf="lightbox" (tap)="close()">
+    <img src="./assets/images-gallery-arrows/close.svg" alt="left">
+</span>
+<span id="left-arrow" (tap)="previous()">
     <img src="./assets/images-gallery-arrows/left.svg" alt="left">
 </span>
-<span id="right-arrow" (click)="next()">
+<span id="right-arrow" (tap)="next()">
     <img src="./assets/images-gallery-arrows/right.svg" alt="right">
 </span>

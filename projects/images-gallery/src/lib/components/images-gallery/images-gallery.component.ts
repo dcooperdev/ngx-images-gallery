@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Image } from '../../interfaces';
+import { LightboxCoordinatorService } from '../../services/lightbox-coordinator.service';
 import { NavbarCoordinatorService } from '../../services/navbar-coordinator.service';
 import { StatusCoordinatorService } from '../../services/status-coordinator.service';
 
@@ -11,10 +12,12 @@ import { StatusCoordinatorService } from '../../services/status-coordinator.serv
 
 export class ImagesGalleryComponent implements OnInit {
   @Input() navbarOrientation: boolean;
-  @Input() selectedImage: Image;
-  @Input() spinner: any;
+  public selectedImage: Image;
 
-  constructor(private navbar: NavbarCoordinatorService, private imageCoordinator: StatusCoordinatorService) {
+  constructor(
+    private navbar: NavbarCoordinatorService,
+    private imageCoordinator: StatusCoordinatorService,
+    private lightboxCoordinator: LightboxCoordinatorService) {
     imageCoordinator.getSelectedImage().subscribe(img => {
       this.selectedImage = img;
     })
@@ -28,5 +31,8 @@ export class ImagesGalleryComponent implements OnInit {
   }
   onSwipeRight(e) {
     this.imageCoordinator.previousImage()
+  }
+  openLightbox() {
+    this.lightboxCoordinator.toggle(true);
   }
 }
