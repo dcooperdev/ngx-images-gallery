@@ -7,7 +7,11 @@
     >
         <ng-content></ng-content>
     </section>
-    <section id="image" [style.background]="'url(' + selectedImage.url + ')'">
-        <ngx-navigation></ngx-navigation>
+    <section
+        id="image"
+        [style.background]="'url(' + selectedImage.url + ')'"
+        (swipeleft)="onSwipeLeft($event)"
+        (swiperight)="onSwipeRight($event)">
+        <ngx-navigation class="hide-on-mobile"></ngx-navigation>
     </section>
 </section>

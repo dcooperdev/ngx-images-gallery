@@ -48,7 +48,6 @@ export class StatusCoordinatorService {
     this._imageSelected.next(this.images[this.index]);
   }
   previousImage() {
-    console.log(this.index, this.index - 1)
     if ((this.index - 1) >= 0) {
       this.index = this.index - 1;
     } else if ((this.index - 1) < 0) {

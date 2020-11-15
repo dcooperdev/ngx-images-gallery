@@ -1,5 +1,6 @@
 :host {
-    display: contents;
+    display: flex;
+    align-items: center;
 }
 span {
     position: absolute;

@@ -1,4 +1,4 @@
-<section #navbar id="navbar" [class.horizontal]='horizontal' *ngIf="images.length > 0">
+<section #navbar id="navbar" [class.horizontal]='horizontal' *ngIf="images.length > 0" [ngClass]="{'hide-on-mobile': hideOnMobile === true}">
     <section *ngFor="let image of images | getMaxThumbnailNavbar:maxImages">
         <section
             class="thumbnail"
@@ -11,6 +11,7 @@
             }"
             (mouseenter)="selecImage(image)"
         >
+            <section id="images-count" [ngClass]="{'show-on-mobile': hideOnMobile === true}">{{ images.length }}</section>
             <img
                 libImageAspect
                 classToApply="portrait"

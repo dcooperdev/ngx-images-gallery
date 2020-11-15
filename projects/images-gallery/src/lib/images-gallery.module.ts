@@ -1,10 +1,20 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser'
+import { Injectable, NgModule } from '@angular/core';
+import { BrowserModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser'
 import { ImagesGalleryComponent } from './components/images-gallery/images-gallery.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ImageAspectDirective } from './directives/image-aspect.directive';
 import { GetMaxThumbnailNavbarPipe } from './pipes/get-max-thumbnail-navbar.pipe';
-import { NavigationComponent } from './components/navigation/navigation.component'
+import { NavigationComponent } from './components/navigation/navigation.component';
+
+import * as Hammer from 'hammerjs';
+import { ImgIsLoadingDirective } from './directives/img-is-loading.directive';
+
+@Injectable() 
+export class MyHammerConfig extends HammerGestureConfig {
+  overrides = <any> {
+    swipe: { direction: Hammer.DIRECTION_ALL },
+  };
+}
 
 @NgModule({
   declarations: [
@@ -12,11 +22,19 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     NavbarComponent,
     GetMaxThumbnailNavbarPipe,
     ImageAspectDirective,
-    NavigationComponent
+    NavigationComponent,
+    ImgIsLoadingDirective,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HammerModule 
   ],
-  exports: [ImagesGalleryComponent, NavbarComponent]
+  exports: [ImagesGalleryComponent, NavbarComponent],
+  providers: [ 
+    { 
+      provide: HAMMER_GESTURE_CONFIG, 
+      useClass: MyHammerConfig, 
+    }, 
+  ],
 })
 export class ImagesGalleryModule { }

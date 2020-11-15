@@ -68,3 +68,20 @@
         -ms-filter: grayscale(0%)!important;
             filter: grayscale(0%)!important;
 }
+
+.show-on-mobile {
+    display: none;
+}
+.hide-on-mobile {
+    display: block;
+}
+@media screen and (max-width: 480px) {
+    .hide-on-mobile {
+        /* display: none; */
+        width: 0;
+        overflow: hidden;
+    }
+    .show-on-mobile {
+        display: block;
+    }
+}

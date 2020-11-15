@@ -11,6 +11,11 @@
   background-size: contain!important;
 }
 
+#image img {
+  width: 100%;
+  height: auto;
+}
+
 #images-gallery {
   display: flex;
   width: 100%;
@@ -34,4 +39,13 @@
 
 .navbar-vertical {
   margin-top: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .hide-on-mobile {
+      display: none;
+  }
+  .navbar-horizontal {
+    margin-right: 0px;
+  }
 }

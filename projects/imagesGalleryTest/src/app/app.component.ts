@@ -68,6 +68,6 @@ export class AppComponent {
    
   ]
 
-  public horizontal = true;
+  public horizontal = false;
   public selectedImage = this.elements[0];
 }

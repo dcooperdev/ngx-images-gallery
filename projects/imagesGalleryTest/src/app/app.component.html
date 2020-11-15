@@ -2,12 +2,14 @@
     <ngx-images-gallery
         #imagesGallery
         [navbarOrientation]="horizontal"
-        [selectedImage]="selectedImage">
+        [selectedImage]="selectedImage"
+        [spinner]="'/assets/Spin-1s-200px.svg'">
         <ngx-navbar
             [imageWidth]="'64px'"
             [imageHeight]="'64px'"
             [images]="elements"
             [maxImages]="6"
+            [hideOnMobile]="true"
         ></ngx-navbar>
     </ngx-images-gallery>
 </section>

@@ -12,6 +12,7 @@ import { StatusCoordinatorService } from '../../services/status-coordinator.serv
 export class ImagesGalleryComponent implements OnInit {
   @Input() navbarOrientation: boolean;
   @Input() selectedImage: Image;
+  @Input() spinner: any;
 
   constructor(private navbar: NavbarCoordinatorService, private imageCoordinator: StatusCoordinatorService) {
     imageCoordinator.getSelectedImage().subscribe(img => {
@@ -21,5 +22,11 @@ export class ImagesGalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this.navbar.setStatus(this.navbarOrientation);
+  }
+  onSwipeLeft(e) {
+    this.imageCoordinator.nextImage()
+  }
+  onSwipeRight(e) {
+    this.imageCoordinator.previousImage()
   }
 }

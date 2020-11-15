@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   @Input() imageHeight: string;
   @Input() images: Image[] = [];
   @Input() maxImages: number;
+  @Input() hideOnMobile: boolean = false;
 
   public selected: Image;
   public horizontal: boolean = false;
