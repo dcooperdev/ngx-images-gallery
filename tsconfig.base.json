@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "images-gallery": [
-        "dist/images-gallery/images-gallery",
-        "dist/images-gallery"
+      "ngx-images-gallery": [
+        "dist/ngx-images-gallery/ngx-images-gallery",
+        "dist/ngx-images-gallery"
       ]
     }
   }

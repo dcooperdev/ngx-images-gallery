@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ImagesGalleryModule } from 'images-gallery';
+import { ImagesGalleryModule } from 'ngx-images-gallery';
 
 import { AppComponent } from './app.component';
 

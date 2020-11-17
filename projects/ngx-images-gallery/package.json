@@ -1,5 +1,5 @@
 {
-  "name": "images-gallery",
+  "name": "ngx-images-gallery",
   "version": "0.0.7",
   "peerDependencies": {
     "@angular/common": "^10.0.14",

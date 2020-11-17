@@ -13,7 +13,7 @@ npm install ngx-images-galley --save
 ## Import
 
 ```javascript
-import { ImagesGalleryModule} from 'images-gallery';
+import { ImagesGalleryModule} from 'ngx-images-gallery';
 
 @NgModule({
   ...,
