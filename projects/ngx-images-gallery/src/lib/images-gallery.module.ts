@@ -1,5 +1,6 @@
 import { Injectable, NgModule } from '@angular/core';
-import { BrowserModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser'
+import { CommonModule } from '@angular/common';
+import { HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser'
 import { ImagesGalleryComponent } from './components/images-gallery/images-gallery.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ImageAspectDirective } from './directives/image-aspect.directive';
@@ -28,10 +29,10 @@ export class MyHammerConfig extends HammerGestureConfig {
     LightboxComponent,
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     HammerModule 
   ],
-  exports: [ImagesGalleryComponent, NavbarComponent, LightboxComponent],
+  exports: [ImagesGalleryComponent, NavbarComponent, LightboxComponent, CommonModule, HammerModule ],
   providers: [ 
     { 
       provide: HAMMER_GESTURE_CONFIG, 
