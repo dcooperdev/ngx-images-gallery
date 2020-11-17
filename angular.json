@@ -53,6 +53,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "hammerjs"
+            ],
             "outputPath": "dist/imagesGalleryTest",
             "index": "projects/imagesGalleryTest/src/index.html",
             "main": "projects/imagesGalleryTest/src/main.ts",
